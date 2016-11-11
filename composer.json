@@ -8,7 +8,8 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
         "pingpong/modules": "~2.0",
-        "frenzy/turbolinks": "dev-master"
+        "frenzy/turbolinks": "dev-master",
+        "laracasts/utilities": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -19,7 +20,8 @@
     },
     "autoload": {
         "classmap": [
-            "database"
+            "database",
+            "modules"
         ],
         "psr-4": {
             "App\\": "app/"
