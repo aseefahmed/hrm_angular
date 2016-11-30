@@ -18,7 +18,15 @@ angular.module('myApp').controller('BuyerController', function($scope, $http) {
     $scope.remove_buyer_confirmed = function(id, page){
         $scope.buyer_name = null;
         $http.delete('/production/buyer/'+id).then(function(response){
-            $('#remove-buyer-modal').modal('toggle');
+            console.log(response)
+            if(id == 'all')
+            {
+                $('#removeall-buyer-modal').modal('toggle');
+            }
+            else
+            {
+                $('#remove-buyer-modal').modal('toggle');
+            }
             $('.top-right').notify({
                 type: 'success',
                 message: { html: '<span class="glyphicon glyphicon-info-sign"></span> <strong>You have successfully deleted the information.</strong>' },
@@ -46,6 +54,24 @@ angular.module('myApp').controller('BuyerController', function($scope, $http) {
                 fadeOut: { enabled: true, delay: 2000 }
             }).show();
         })
+    };
+
+    $scope.delete_all = function(action){
+        if(action == 'all')
+        {
+            $scope.modal_msg = "Do you really want to delete all buyers";
+        }
+        else if(action == 'selected')
+        {
+            var arr = [];
+            $('.select_row:checked').each(function() {
+                arr.push(parseInt(this.value, 10));
+            });
+            console.log(arr)
+            $scope.selected_items = arr;
+            $scope.modal_msg = "Do you really want to delete selected buyers";
+        }
+        $('#removeall-buyer-modal').modal('toggle');
     };
     $scope.init = function(id){
         $http.get('/production/buyer/fetchBuyerDetails/'+id).then(function(response){

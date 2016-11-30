@@ -1,4 +1,4 @@
 angular.module('myApp', ['angularUtils.directives.dirPagination'], function($interpolateProvider) {
-    $interpolateProvider.startSymbol('<<');
-    $interpolateProvider.endSymbol('>>');
+    $interpolateProvider.startSymbol('##');
+    $interpolateProvider.endSymbol('##');
 });

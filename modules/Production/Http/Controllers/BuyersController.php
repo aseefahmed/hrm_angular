@@ -35,10 +35,18 @@ class BuyersController extends Controller {
         return view('production::buyers.edit', $data);
     }
 
-    public function destroy(Request $request, Buyer $buyer){
-        $this->authorize('destroy', $buyer);
-        $buyer = Buyer::find($buyer->id);
-        $buyer->delete();
+    public function destroy(Request $request, $id){
+
+        if($id == 'all')
+        {
+            Buyer::truncate();
+        }
+        else
+        {
+            $buyer = Buyer::find($id);
+            $buyer->delete();
+        }
+
     }
 
     public function update(Request $request){

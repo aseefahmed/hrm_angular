@@ -13,13 +13,13 @@
 <!-- Angular JS -->
 <script src="{{ asset('js/angular/angular.min.js') }}"></script>
 <!-- angular js main app js -->
-<script src="{{ asset('js/angular/main.js') }}"></script>
+<script src="{{ asset('js/angular/production/main.js') }}"></script>
 <!-- angular js controllers -->
-<script src="{{ asset('js/angular/controller.js') }}"></script>
+<script src="{{ asset('js/angular/production/controller.js') }}"></script>
 <!-- angular js filters -->
-<script src="{{ asset('js/angular/filter.js') }}"></script>
+<script src="{{ asset('js/angular/production/filter.js') }}"></script>
 <!-- Pagination Library -->
-<script src="{{ asset('js/angular/dirPagination.js') }}"></script>
+<script src="{{ asset('js/angular/production/dirPagination.js') }}"></script>
 
 <!-- React scripts -->
 {{--<script src="{{ asset('js/react-build/app.js') }}"></script>--}}

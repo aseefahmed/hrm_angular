@@ -18,7 +18,8 @@
                                 <ul class="dropdown-menu">
                                     <li><a data-toggle="modal" data-backdrop="static" href="#add-buyer-modal"><span class="glyphicon glyphicon-plus-sign"></span> Add</a></li>
                                     <li><a href="#" id="update-buyer-btn"><span class="glyphicon glyphicon-pencil"></span> Edit</a></li>
-                                    <li><a href="#" id="update-buyer-btn"><span class="glyphicon glyphicon-trash"></span> Delete</a></li>
+                                    <li><a href="#" ng-click="delete_all('selected')"><span class="glyphicon glyphicon-trash"></span> Delete Seleted</a></li>
+                                    <li><a href="#" ng-click="delete_all('all')"><span class="glyphicon glyphicon-repeat"></span> Delete All</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -45,7 +46,7 @@
                                     <table class="table table-responsive table-bordered table-striped">
                                         <thead>
                                         <tr>
-                                            <th class="table_checkSqlite (Xerial) - hrm.dbbox"><input name="select_rows" class="select_rows" data-tableid="dt_gal" type="checkbox"/></th>
+                                            <th><input ng-click="check_all()" name="row_sel" id="chkbox" type="checkbox" checked=""/></th>
                                             <th>Image</th>
                                             <th class="th-pointer" ng-click="sort('buyer_name')">Buyer Name <span class="glyphicon glyphicon-sort-icon"  ng-show="sortKey=='buyer_name'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
                                             <th class="th-pointer" ng-click="sort('created_at')">Created At <span class="glyphicon glyphicon-sort-icon"  ng-show="sortKey=='created_at'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
@@ -58,15 +59,16 @@
                                             <td colspan="6">No data found.</td>
                                         </tr>
                                             <tr dir-paginate="buyer in filtered = (buyers| orderBy : sortKey : reverse | filter : search_filter  | itemsPerPage : num_of_items) " ng-cloak>
-                                                <td><input name="row_sel" class="select_row" type="checkbox"/></td>
-                                                <td ng-cloak><img src="{{ asset('img/uploads/production/buyers') }}/<< buyer.image >>" width="80px"/></td>
-                                                <td ng-cloak><< buyer.buyer_name >></td>
-                                                <td ng-cloak><< buyer.created_at | filterDate >></td>
-                                                <td ng-cloak><< buyer.updated_at | filterDate >></td>
+                                                <td><input name="row_sel" class="select_row" type="checkbox" name="chkbox" value="## buyer.id ##"/></td>
+                                                <td ng-cloak><img src="{{ asset('img/uploads/production/buyers') }}/## buyer.image ##" width="80px"/></td>
+                                                <td ng-cloak>## buyer.buyer_name ##</td>
+                                                <td ng-cloak>## buyer.created_at | filterDate ##</td>
+                                                <td ng-cloak>## buyer.updated_at | filterDate ##</td>
                                                 <td  ng-cloak align="center">
-                                                    <a class="btn btn-primary" href="{{ url('production/buyer/show') }}/<< buyer.id >>"><i class="glyphicon glyphicon-eye-open" class="view_buyer_btn"></i></a>&nbsp;
-                                                    <a class="btn btn-warning" href="{{ url('production/buyer/edit') }}/<< buyer.id >>"><i class="glyphicon glyphicon-edit" id="edit_buyer_btn"></i></a>&nbsp;
-                                                    <a class="btn btn-danger" ng-click="remove_buyer(buyer.id, buyer.buyer_name)" buyer_name="<< buyer.name >>" buyer_id="<< buyer.id >>"><i class="glyphicon glyphicon-trash"></i></a>
+                                                    <a class="btn btn-primary" href="{{ url('production/buyer/show') }}/## buyer.id ##"><i class="glyphicon glyphicon-eye-open" class="view_buyer_btn"></i></a>&nbsp;
+
+                                                    <a ng-if="buyer.user_id == {{ Auth::user()->id }}" class="btn btn-warning" href="{{ url('production/buyer/edit') }}/## buyer.id ##"><i class="glyphicon glyphicon-edit" id="edit_buyer_btn"></i></a>&nbsp;
+                                                    <a ng-if="buyer.user_id == {{ Auth::user()->id }}" class="btn btn-danger" ng-click="remove_buyer(buyer.id, buyer.buyer_name)" buyer_name="## buyer.name ##" buyer_id="## buyer.id ##"><i class="glyphicon glyphicon-trash"></i></a>
                                                 </td>
                                             </tr>
 
@@ -131,13 +133,48 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h3 class="modal-title">Add Buyer</h3>
+                            <h3 class="modal-title">Remove Buyer</h3>
                         </div>
                         <div class="modal-body">
-                            Do you really want to remove the buyer <code id="code_buyer_name"><< buyer_name >></code> ?
+                            Do you really want to remove the buyer <code id="code_buyer_name">## buyer_name ##</code> ?
                             <div class="modal-footer">
                                 <a class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove-sign"></span> Cancel</a>
                                 <button type="submit" name="commit" class="btn btn-success" ng-click="remove_buyer_confirmed(buyer_id, 'index_page')" buyer_id=""><span class="glyphicon glyphicon-ok-sign"></span> Yes </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="removeall-buyer-modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h3 class="modal-title">Remove Buyer</h3>
+                        </div>
+                        <div class="modal-body">
+                            ## modal_msg ##
+                            <div class="modal-footer">
+                                <a class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove-sign"></span> Cancel</a>
+                                <button type="submit" name="commit" class="btn btn-success" ng-click="remove_buyer_confirmed('all', 'index_page')" buyer_id=""><span class="glyphicon glyphicon-ok-sign"></span> Yes </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="removal-warning-modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h3 class="modal-title">Remove Buyer</h3>
+                        </div>
+                        <div class="modal-body">
+                            Please Select at least one buyer.
+                            <div class="modal-footer">
+                                <a class="btn btn-success" data-dismiss="modal"><span class="glyphicon glyphicon-ok-sign"></span> OK</a>
                             </div>
                         </div>
                     </div>

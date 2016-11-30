@@ -16,8 +16,9 @@
                                     <i class="glyphicon glyphicon-cog"></i> Action <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="/production/buyer/edit/{{ $buyer_id }}" target="_top"><span class="glyphicon glyphicon-pencil"></span> Edit</a></li>
-                                    <li><a class="th-pointer" ng-click="remove_buyer({{ $buyer_id  }})"><span class="glyphicon glyphicon-trash"></span> Delete</a></li>
+                                    <li><a href="/production/buyers" target="_top"><span class="glyphicon glyphicon-arrow-left"></span> Cancel</a></li>
+                                    <li><a ng-if="buyer[0].user_id == {{ Auth::user()->id }}" href="/production/buyer/edit/{{ $buyer_id }}" target="_top"><span class="glyphicon glyphicon-pencil"></span> Edit</a></li>
+                                    <li><a ng-if="buyer[0].user_id == {{ Auth::user()->id }}" class="th-pointer" ng-click="remove_buyer({{ $buyer_id  }})"><span class="glyphicon glyphicon-trash"></span> Delete</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -30,20 +31,20 @@
                                         <thead>
                                         <tr>
                                             <th width='25%'>Buyer Name: </th>
-                                            <td><< buyer[0].buyer_name | uppercase >></td>
-                                            <td rowspan="3" width="25%"><img src="{{ asset('img/uploads/production/buyers') }}/<< buyer[0].image >>" width="100%" height="100%"></td>
+                                            <td>## buyer[0].buyer_name | uppercase ##</td>
+                                            <td rowspan="3" width="25%"><img src="{{ asset('img/uploads/production/buyers') }}/## buyer[0].image ##" width="100%" height="100%"></td>
                                         </tr>
                                         <tr>
                                             <th width='25%'>Created By: </th>
-                                            <td><< buyer[0].user.first_name | uppercase >> << buyer[0].user.last_name | uppercase >></td>
+                                            <td>## buyer[0].user.first_name | uppercase ## ## buyer[0].user.last_name | uppercase ##</td>
                                         </tr>
                                         <tr>
                                             <th width='25%'>Created At: </th>
-                                            <td><< buyer[0].created_at | filterDate >></td>
+                                            <td>## buyer[0].created_at | filterDate ##</td>
                                         </tr>
                                         <tr>
                                             <th width='25%'>Updated At: </th>
-                                            <td><< buyer[0].updated_at | filterDate >></td>
+                                            <td>## buyer[0].updated_at | filterDate ##</td>
                                         </tr>
                                         </thead>
                                     </table>
@@ -62,10 +63,10 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h3 class="modal-title">Add Buyer</h3>
+                            <h3 class="modal-title">Remove Buyer</h3>
                         </div>
                         <div class="modal-body">
-                            Do you really want to remove the buyer <code id="code_buyer_name"><< buyer[0].buyer_name >></code> ?
+                            Do you really want to remove the buyer <code id="code_buyer_name">## buyer[0].buyer_name ##</code> ?
                             <div class="modal-footer">
                                 <a class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove-sign"></span> Cancel</a>
                                 <button type="submit" name="commit" class="btn btn-success" ng-click="remove_buyer_confirmed(buyer_id, 'show_page')" buyer_id=""><span class="glyphicon glyphicon-ok-sign"></span> Yes </button>
