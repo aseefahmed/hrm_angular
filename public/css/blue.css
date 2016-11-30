@@ -100,3 +100,11 @@
 .elegant-aero .button:hover{
     background: #3EB1DD;
 }
+
+.th-pointer {
+    cursor: pointer;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}

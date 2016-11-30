@@ -29,7 +29,7 @@ class LoginController extends Controller
 
     public function processLogin(Request $request){
         if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
-            return redirect('/production');
+            return redirect('/production/buyers');
         }
         else{
             return redirect('/login');

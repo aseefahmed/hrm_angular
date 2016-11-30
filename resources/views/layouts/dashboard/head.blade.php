@@ -16,9 +16,13 @@
     <!-- theme color-->
     <link rel="stylesheet" href="{{ asset('css/blue.css') }}" id="link_theme" />
     <!-- Google Font-->
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <!--link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'-->
     <!-- breadcrumbs -->
     <link rel="stylesheet" href="{{ asset('lib/jBreadcrumbs/css/BreadCrumb.css') }}" />
+    <!-- breadcrumbs -->
+    <link rel="stylesheet" href="{{ asset('lib/select2/select2.css') }}" />
+    <!-- Bootstrap Notification -->
+    <link rel="stylesheet" href="{{ asset('lib/bootstrap-notify/css/bootstrap-notify.css') }}" />
     <!-- File Input -->
     {{--<link href="{{ asset('lib/bootstrap-fileinput/css/fileinput.min.css') }}" rel="stylesheet">--}}
     <!-- jQuery UI theme -->

@@ -41,24 +41,15 @@
                             <i class="glyphicon glyphicon-user"></i> Buyers
                         </a>
                     </div>
-                    @if(Route::currentRouteName() == "Buyers")
+                    @if(Route::currentRouteName() == "Buyers" || Route::currentRouteName() == "Add Buyer" ||
+                            Route::currentRouteName() == "Buyer Details" || Route::currentRouteName() == "Edit Buyer Details")
                         {{--*/$buyers_scollapse = 'in'/*--}}
-                        {{--*/$buyers_class = 'bg bg-success'/*--}}
-                        {{--*/$add_buyer_class = ''/*--}}
-                    @elseif(Route::currentRouteName() == "Add Buyer")
-                        {{--*/$buyers_scollapse = 'in'/*--}}
-                        {{--*/$add_buyer_class = 'bg bg-success'/*--}}
-                        {{--*/$buyers_class = ''/*--}}
-                    @else
-                        {{--*/$buyers_scollapse = ''/*--}}
-                        {{--*/$buyers_class = ''/*--}}
-                        {{--*/$add_buyer_class = ''/*--}}
                     @endif
                     <div class="accordion-body collapse {{$buyers_scollapse}}" id="collapseThree">
                         <div class="panel-body">
                             <ul class="nav nav-pills nav-stacked">
-                                <li class="{{ $buyers_class }}"><a href="/production/buyers">View Buyers</a></li>
-                                <li class="{{ $add_buyer_class }}"><a href="/production/buyers/add">Add Buyer</a></li>
+                                <li class="{{ (Route::currentRouteName() == "Buyers")? "bg bg-success":"" }}"><a href="/production/buyers">View Buyers</a></li>
+                                <li class=""><a href="/production/buyers/add">Add Buyer</a></li>
                             </ul>
 
                         </div>
