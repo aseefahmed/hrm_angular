@@ -28,17 +28,15 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/jquery/jquery_cookie_min.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/splashy/splashy.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/lib/splashy/splashy.png" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/angular/controller.js" afterPath="$PROJECT_DIR$/public/js/angular/production/controller.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/angular/dirPagination.js" afterPath="$PROJECT_DIR$/public/js/angular/production/dirPagination.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/angular/filter.js" afterPath="$PROJECT_DIR$/public/js/angular/production/filter.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/js/angular/main.js" afterPath="$PROJECT_DIR$/public/js/angular/production/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/hrm.db" afterPath="$PROJECT_DIR$/database/hrm.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/Production/Http/Controllers/BuyersController.php" afterPath="$PROJECT_DIR$/modules/Production/Http/Controllers/BuyersController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/Production/Http/routes.php" afterPath="$PROJECT_DIR$/modules/Production/Http/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/Production/Resources/views/buyers/edit.blade.php" afterPath="$PROJECT_DIR$/modules/Production/Resources/views/buyers/edit.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/Production/Resources/views/buyers/index.blade.php" afterPath="$PROJECT_DIR$/modules/Production/Resources/views/buyers/index.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/Production/Resources/views/buyers/show.blade.php" afterPath="$PROJECT_DIR$/modules/Production/Resources/views/buyers/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard/scripts.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard/scripts.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/blue.css" afterPath="$PROJECT_DIR$/public/css/blue.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/angular/production/controller.js" afterPath="$PROJECT_DIR$/public/js/angular/production/controller.js" />
     </list>
     <ignored path="hrm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,19 +74,9 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/Production/Resources/views/buyers/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="153" column="58" selection-start-line="153" selection-start-column="58" selection-end-line="153" selection-end-column="58" />
-              <folding>
-                <element signature="e#5568#5574#0#HTML" expanded="true" />
-                <element signature="e#5824#5830#0#HTML" expanded="true" />
-                <element signature="e#7313#7320#0#HTML" expanded="true" />
-                <element signature="e#7822#7839#0#HTML" expanded="true" />
-                <element signature="e#7959#7965#0#HTML" expanded="true" />
-                <element signature="e#7965#7971#0#HTML" expanded="true" />
-                <element signature="e#9672#9679#0#HTML" expanded="true" />
-                <element signature="e#10830#10837#0#HTML" expanded="true" />
-                <element signature="e#11909#11916#0#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="176">
+              <caret line="67" column="52" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -96,14 +84,12 @@
       <file leaf-file-name="controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/angular/production/controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="64" column="9" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
+            <state relative-caret-position="1395">
+              <caret line="111" column="21" selection-start-line="111" selection-start-column="18" selection-end-line="111" selection-end-column="21" />
               <folding>
-                <element signature="e#283#395#0" expanded="false" />
                 <element signature="e#469#551#0" expanded="false" />
-                <element signature="e#2922#3068#0" expanded="false" />
-                <element signature="e#3481#4129#0" expanded="false" />
-                <element signature="e#4251#4526#0" expanded="false" />
+                <element signature="e#5023#5671#0" expanded="false" />
+                <element signature="e#5793#6068#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -122,8 +108,8 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/Production/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="33" />
+            <state relative-caret-position="120">
+              <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -142,32 +128,61 @@
       <file leaf-file-name="BuyersController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/Production/Http/Controllers/BuyersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+            <state relative-caret-position="186">
+              <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules/Production/Resources/views/buyers/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="216" selection-start-line="19" selection-start-column="216" selection-end-line="20" selection-end-column="218" />
+            <state relative-caret-position="255">
+              <caret line="32" column="88" selection-start-line="32" selection-start-column="88" selection-end-line="32" selection-end-column="88" />
               <folding>
-                <element signature="e#3924#3931#0#HTML" expanded="true" />
+                <marker date="1480528737674" expanded="true" signature="2477:2532" ph="..." />
+                <marker date="1480528737674" expanded="true" signature="2816:2871" ph="..." />
+                <marker date="1480528737674" expanded="true" signature="3163:3218" ph="..." />
+                <marker date="1480528737674" expanded="true" signature="3714:3740" ph="..." />
+                <marker date="1480528737674" expanded="true" signature="3857:4649" ph="..." />
+                <marker date="1480528737674" expanded="true" signature="3900:4649" ph="..." />
+                <marker date="1480528737674" expanded="true" signature="3948:4649" ph="..." />
+                <marker date="1480528737674" expanded="true" signature="3999:4221" ph="..." />
+                <marker date="1480528737674" expanded="true" signature="4105:4112" ph="×" />
+                <marker date="1480528737674" expanded="true" signature="4270:4649" ph="..." />
+                <marker date="1480528737674" expanded="true" signature="4369:4649" ph="..." />
+                <marker date="1480528737674" expanded="true" signature="4946:5748" ph="..." />
+                <marker date="1480528737674" expanded="true" signature="4989:5729" ph="..." />
+                <marker date="1480528737674" expanded="true" signature="5037:5706" ph="..." />
+                <marker date="1480528737674" expanded="true" signature="5088:5310" ph="..." />
+                <marker date="1480528737674" expanded="true" signature="5194:5201" ph="×" />
+                <marker date="1480528737674" expanded="true" signature="5359:5679" ph="..." />
+                <marker date="1480528737674" expanded="true" signature="5476:5648" ph="..." />
+                <marker date="1480528737674" expanded="true" signature="5808:7625" ph="..." />
+                <marker date="1480528737674" expanded="true" signature="5851:7606" ph="..." />
+                <marker date="1480528737674" expanded="true" signature="5899:7583" ph="..." />
+                <marker date="1480528737674" expanded="true" signature="5950:6170" ph="..." />
+                <marker date="1480528737674" expanded="false" signature="6056:6063" ph="×" />
+                <marker date="1480528737674" expanded="true" signature="6219:7556" ph="..." />
+                <marker date="1480528737674" expanded="true" signature="6318:7525" ph="..." />
+                <marker date="1480528737674" expanded="true" signature="6372:7032" ph="..." />
+                <marker date="1480528737674" expanded="true" signature="6426:6993" ph="..." />
+                <marker date="1480528737674" expanded="true" signature="6490:6950" ph="..." />
+                <marker date="1480528737674" expanded="true" signature="6664:6776" ph="..." />
+                <marker date="1480528737674" expanded="true" signature="7091:7489" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/Production/Resources/views/buyers/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="218" selection-start-line="20" selection-start-column="218" selection-end-line="20" selection-end-column="218" />
+            <state relative-caret-position="15">
+              <caret line="39" column="145" selection-start-line="39" selection-start-column="139" selection-end-line="39" selection-end-column="145" />
               <folding>
-                <element signature="e#6406#6413#0#HTML" expanded="true" />
+                <element signature="e#5480#5487#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -186,8 +201,8 @@
       <file leaf-file-name="blue.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/blue.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1545">
-              <caret line="103" column="1" selection-start-line="103" selection-start-column="1" selection-end-line="103" selection-end-column="12" />
+            <state relative-caret-position="475">
+              <caret line="107" column="17" selection-start-line="107" selection-start-column="17" selection-end-line="107" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -253,19 +268,19 @@
         <option value="$PROJECT_DIR$/public/js/angular/dirPagination.js" />
         <option value="$PROJECT_DIR$/resources/views/layouts/dashboard/test.php" />
         <option value="$PROJECT_DIR$/modules/Production/Resources/views/ajax-views/buyers-list.blade.php" />
-        <option value="$PROJECT_DIR$/modules/Production/Http/routes.php" />
         <option value="$PROJECT_DIR$/public/js/angular/main.js" />
         <option value="$PROJECT_DIR$/public/js/angular/filter.js" />
-        <option value="$PROJECT_DIR$/public/css/blue.css" />
         <option value="$PROJECT_DIR$/database/migrations/2016_11_29_164849_alter_table_buyer_2235.php" />
         <option value="$PROJECT_DIR$/public/js/angular/controller.js" />
         <option value="$PROJECT_DIR$/resources/views/layouts/dashboard/scripts.blade.php" />
         <option value="$PROJECT_DIR$/public/js/angular/production/main.js" />
-        <option value="$PROJECT_DIR$/modules/Production/Http/Controllers/BuyersController.php" />
-        <option value="$PROJECT_DIR$/public/js/angular/production/controller.js" />
-        <option value="$PROJECT_DIR$/modules/Production/Resources/views/buyers/index.blade.php" />
-        <option value="$PROJECT_DIR$/modules/Production/Resources/views/buyers/show.blade.php" />
+        <option value="$PROJECT_DIR$/public/css/blue.css" />
         <option value="$PROJECT_DIR$/modules/Production/Resources/views/buyers/edit.blade.php" />
+        <option value="$PROJECT_DIR$/modules/Production/Http/routes.php" />
+        <option value="$PROJECT_DIR$/modules/Production/Http/Controllers/BuyersController.php" />
+        <option value="$PROJECT_DIR$/modules/Production/Resources/views/buyers/index.blade.php" />
+        <option value="$PROJECT_DIR$/public/js/angular/production/controller.js" />
+        <option value="$PROJECT_DIR$/modules/Production/Resources/views/buyers/show.blade.php" />
       </list>
     </option>
   </component>
@@ -320,7 +335,156 @@
       <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hrm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hrm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hrm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hrm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hrm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Production" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hrm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hrm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Production" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hrm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hrm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Production" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="buyers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hrm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hrm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Production" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hrm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hrm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Production" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hrm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hrm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
     </panes>
   </component>
@@ -434,19 +598,19 @@
       <workItem from="1480405085210" duration="385000" />
       <workItem from="1480405866977" duration="6018000" />
       <workItem from="1480431104306" duration="9754000" />
-      <workItem from="1480475337132" duration="8409000" />
+      <workItem from="1480475337132" duration="22069000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189521000" />
+    <option name="totallyTimeSpent" value="203181000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="28" width="1368" height="708" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16837482" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16837482" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3412162" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.030746706" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -488,7 +652,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/public/js/angular/production/controller.js</url>
-          <line>80</line>
+          <line>116</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
@@ -779,14 +943,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/blue.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1545">
-          <caret line="103" column="1" selection-start-line="103" selection-start-column="1" selection-end-line="103" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_11_29_164849_alter_table_buyer_2235.php" />
     <entry file="file://$PROJECT_DIR$/public/js/angular/production/main.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -804,32 +960,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/Production/Http/routes.php">
+    <entry file="file://$PROJECT_DIR$/public/css/blue.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="33" />
+        <state relative-caret-position="475">
+          <caret line="107" column="17" selection-start-line="107" selection-start-column="17" selection-end-line="107" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/Production/Http/Controllers/BuyersController.php">
+    <entry file="file://$PROJECT_DIR$/modules/Production/Resources/views/buyers/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/angular/production/controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="64" column="9" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
+        <state relative-caret-position="15">
+          <caret line="39" column="145" selection-start-line="39" selection-start-column="139" selection-end-line="39" selection-end-column="145" />
           <folding>
-            <element signature="e#283#395#0" expanded="false" />
-            <element signature="e#469#551#0" expanded="false" />
-            <element signature="e#2922#3068#0" expanded="false" />
-            <element signature="e#3481#4129#0" expanded="false" />
-            <element signature="e#4251#4526#0" expanded="false" />
+            <element signature="e#5480#5487#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -842,40 +986,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/modules/Production/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/Production/Http/Controllers/BuyersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/modules/Production/Resources/views/buyers/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="153" column="58" selection-start-line="153" selection-start-column="58" selection-end-line="153" selection-end-column="58" />
+        <state relative-caret-position="176">
+          <caret line="67" column="52" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/angular/production/controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1395">
+          <caret line="111" column="21" selection-start-line="111" selection-start-column="18" selection-end-line="111" selection-end-column="21" />
           <folding>
-            <element signature="e#5568#5574#0#HTML" expanded="true" />
-            <element signature="e#5824#5830#0#HTML" expanded="true" />
-            <element signature="e#7313#7320#0#HTML" expanded="true" />
-            <element signature="e#7822#7839#0#HTML" expanded="true" />
-            <element signature="e#7959#7965#0#HTML" expanded="true" />
-            <element signature="e#7965#7971#0#HTML" expanded="true" />
-            <element signature="e#9672#9679#0#HTML" expanded="true" />
-            <element signature="e#10830#10837#0#HTML" expanded="true" />
-            <element signature="e#11909#11916#0#HTML" expanded="true" />
+            <element signature="e#469#551#0" expanded="false" />
+            <element signature="e#5023#5671#0" expanded="false" />
+            <element signature="e#5793#6068#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/Production/Resources/views/buyers/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="216" selection-start-line="19" selection-start-column="216" selection-end-line="20" selection-end-column="218" />
+        <state relative-caret-position="255">
+          <caret line="32" column="88" selection-start-line="32" selection-start-column="88" selection-end-line="32" selection-end-column="88" />
           <folding>
-            <element signature="e#3924#3931#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/Production/Resources/views/buyers/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="218" selection-start-line="20" selection-start-column="218" selection-end-line="20" selection-end-column="218" />
-          <folding>
-            <element signature="e#6406#6413#0#HTML" expanded="true" />
+            <marker date="1480528737674" expanded="true" signature="2477:2532" ph="..." />
+            <marker date="1480528737674" expanded="true" signature="2816:2871" ph="..." />
+            <marker date="1480528737674" expanded="true" signature="3163:3218" ph="..." />
+            <marker date="1480528737674" expanded="true" signature="3714:3740" ph="..." />
+            <marker date="1480528737674" expanded="true" signature="3857:4649" ph="..." />
+            <marker date="1480528737674" expanded="true" signature="3900:4649" ph="..." />
+            <marker date="1480528737674" expanded="true" signature="3948:4649" ph="..." />
+            <marker date="1480528737674" expanded="true" signature="3999:4221" ph="..." />
+            <marker date="1480528737674" expanded="true" signature="4105:4112" ph="×" />
+            <marker date="1480528737674" expanded="true" signature="4270:4649" ph="..." />
+            <marker date="1480528737674" expanded="true" signature="4369:4649" ph="..." />
+            <marker date="1480528737674" expanded="true" signature="4946:5748" ph="..." />
+            <marker date="1480528737674" expanded="true" signature="4989:5729" ph="..." />
+            <marker date="1480528737674" expanded="true" signature="5037:5706" ph="..." />
+            <marker date="1480528737674" expanded="true" signature="5088:5310" ph="..." />
+            <marker date="1480528737674" expanded="true" signature="5194:5201" ph="×" />
+            <marker date="1480528737674" expanded="true" signature="5359:5679" ph="..." />
+            <marker date="1480528737674" expanded="true" signature="5476:5648" ph="..." />
+            <marker date="1480528737674" expanded="true" signature="5808:7625" ph="..." />
+            <marker date="1480528737674" expanded="true" signature="5851:7606" ph="..." />
+            <marker date="1480528737674" expanded="true" signature="5899:7583" ph="..." />
+            <marker date="1480528737674" expanded="true" signature="5950:6170" ph="..." />
+            <marker date="1480528737674" expanded="false" signature="6056:6063" ph="×" />
+            <marker date="1480528737674" expanded="true" signature="6219:7556" ph="..." />
+            <marker date="1480528737674" expanded="true" signature="6318:7525" ph="..." />
+            <marker date="1480528737674" expanded="true" signature="6372:7032" ph="..." />
+            <marker date="1480528737674" expanded="true" signature="6426:6993" ph="..." />
+            <marker date="1480528737674" expanded="true" signature="6490:6950" ph="..." />
+            <marker date="1480528737674" expanded="true" signature="6664:6776" ph="..." />
+            <marker date="1480528737674" expanded="true" signature="7091:7489" ph="..." />
           </folding>
         </state>
       </provider>

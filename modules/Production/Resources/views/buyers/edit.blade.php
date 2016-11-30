@@ -18,7 +18,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a href="/production/buyer/show/{{ $buyer_id }}" target="_top"><span class="glyphicon glyphicon-arrow-left"></span> Cancel</a></li>
                                     <li><a  ng-if="buyer[0].user_id == {{ Auth::user()->id }}" data-toggle="modal" data-backdrop="static" href="#confirm-buyer-update"><span class="glyphicon glyphicon-pencil"></span> Update</a></li>
-                                    <li><a ng-if="buyer[0].user_id == {{ Auth::user()->id }}" class="th-pointer" ng-click="remove_buyer({{ $buyer_id  }})"><span class="glyphicon glyphicon-trash"></span> Delete</a></li>
+                                    <li><a ng-if="buyer[0].user_id == {{ Auth::user()->id }}" class="th-pointer" ng-click="remove_buyer({{ $buyer_id  }}, buyer[0].buyer_name, 'single_delete')"><span class="glyphicon glyphicon-trash"></span> Delete</a></li>
                                 </ul>
                                 &nbsp;
                                 <img src="{{ asset('img/loading.gif') }}" style="display: none;" id="ajax-loader">
@@ -37,7 +37,7 @@
                                                     <div class="row">
                                                         &nbsp;&nbsp;
                                                     </div>
-                                                    <input class="form-control" placeholder="Buyer Name" type="text" ng-model="buyer_name" />
+                                                    <input class="form-control" placeholder="Buyer Name" type="text" ng-model="buyer_name" vanlue="buyer[0].buyer_name" />
                                                 </div>
                                             </div>
                                         </div>
@@ -65,23 +65,6 @@
                 @include('production::partials.orders_stats')
             </div>
 
-            <div class="modal fade" id="confirm-buyer-removal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h3 class="modal-title">Add Buyer</h3>
-                        </div>
-                        <div class="modal-body">
-                            Do you really want to remove the buyer <code></code> ?
-                            <div class="modal-footer">
-                                <a class="btn btn-danger" data-diesmiss="modal">Cancel</a>
-                                <button type="submit" name="commit" class="btn btn-success" id="remove-buyer-btn" buyer_id="{{ $buyer_id }}">Yes </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="modal fade" id="confirm-buyer-update">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -108,10 +91,10 @@
                             <h3 class="modal-title">Remove Buyer</h3>
                         </div>
                         <div class="modal-body">
-                            Do you really want to remove the buyer <code id="code_buyer_name">## buyer[0].buyer_name ##</code> ?
+                            ## modal_msg ##
                             <div class="modal-footer">
                                 <a class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove-sign"></span> Cancel</a>
-                                <button type="submit" name="commit" class="btn btn-success" ng-click="remove_buyer_confirmed(buyer_id, 'show_page')" buyer_id=""><span class="glyphicon glyphicon-ok-sign"></span> Yes </button>
+                                <button type="submit" name="commit" class="btn btn-success" ng-click="remove_buyer_confirmed(buyer_id, 'show_page', 'single_delete')" buyer_id=""><span class="glyphicon glyphicon-ok-sign"></span> Yes </button>
                             </div>
                         </div>
                     </div>

@@ -10,23 +10,55 @@ angular.module('myApp').controller('BuyerController', function($scope, $http) {
         $scope.sortKey = header;
         $scope.reverse = !$scope.reverse;
     };
-    $scope.remove_buyer = function(id, name){
-        $('#remove-buyer-modal').modal('toggle');
-        $scope.buyer_name = name;
-        $scope.buyer_id = id;
-    };
-    $scope.remove_buyer_confirmed = function(id, page){
-        $scope.buyer_name = null;
-        $http.delete('/production/buyer/'+id).then(function(response){
-            console.log(response)
-            if(id == 'all')
+    $scope.remove_buyer = function(id, name, action){
+        if(action == 'single_delete')
+        {
+            $scope.buyer_name = name;
+            $scope.buyer_id = id;
+            $scope.status = 'single_delete';
+            $scope.modal_msg = "Do you really want to delete the buyer "+$scope.buyer_name+".";
+            $('#remove-buyer-modal').modal('toggle');
+        }
+        else if(action == 'all')
+        {
+            if($scope.buyers.length == 0)
             {
-                $('#removeall-buyer-modal').modal('toggle');
+                $('#removal-warning-modal').modal('toggle');
             }
             else
             {
+                $scope.buyer_id = 0;
+                $scope.status = 'all';
+                $scope.modal_msg = "Do you really want to delete all buyers";
                 $('#remove-buyer-modal').modal('toggle');
             }
+        }
+        else if(action == 'selected')
+        {
+            var arr = [];
+            $scope.status = 'selected';
+            $('.select_row:checked').each(function() {
+                console.log(this.value)
+                arr.push(this.value);
+
+            });
+            $scope.modal_msg = "Do you really want to delete selected buyers";
+            if(arr.length == 0)
+            {
+                $('#removal-warning-modal').modal('toggle');
+            }
+            else
+            {
+                $scope.buyer_id = arr;
+                $('#remove-buyer-modal').modal('toggle');
+            }
+        }
+    };
+    $scope.remove_buyer_confirmed = function(id, page, action){
+        $scope.buyer_name = null;
+        $http.delete('/production/buyer/'+id+"/"+action).then(function(response){
+            console.log(response)
+            $('#remove-buyer-modal').modal('toggle');
             $('.top-right').notify({
                 type: 'success',
                 message: { html: '<span class="glyphicon glyphicon-info-sign"></span> <strong>You have successfully deleted the information.</strong>' },
@@ -55,29 +87,33 @@ angular.module('myApp').controller('BuyerController', function($scope, $http) {
             }).show();
         })
     };
-
-    $scope.delete_all = function(action){
-        if(action == 'all')
-        {
-            $scope.modal_msg = "Do you really want to delete all buyers";
-        }
-        else if(action == 'selected')
-        {
-            var arr = [];
-            $('.select_row:checked').each(function() {
-                arr.push(parseInt(this.value, 10));
-            });
-            console.log(arr)
-            $scope.selected_items = arr;
-            $scope.modal_msg = "Do you really want to delete selected buyers";
-        }
-        $('#removeall-buyer-modal').modal('toggle');
-    };
     $scope.init = function(id){
         $http.get('/production/buyer/fetchBuyerDetails/'+id).then(function(response){
             $scope.buyer = response.data;
         })
     };
+    $scope.edit_buyer = function (id, edit_item, field) {
+        $scope.editable_item = edit_item;
+        $scope.buyer_id = id;
+        $scope.field = field;
+        $scope.type = null;
+        $('#edit-buyer-modal').modal('toggle');
+    }
+    $scope.edit_buyer_confirmed = function (id) {
+        $('#edit-buyer-modal').modal('toggle');
+        $http.get('/production/buyer/update/'+$scope.field+'/'+id+'/'+$scope.type).then(function(response){
+            $('.top-right').notify({
+                type: 'success',
+                message: { html: '<span class="glyphicon glyphicon-info-sign"></span> <strong>You have successfully updated the information.</strong>' },
+                closable: false,
+                fadeOut: { enabled: true, delay: 2000 }
+            }).show();
+            $scope.buyer = response.data;
+            $http.get('/production/buyer/fetchBuyerDetails/'+id).then(function(response){
+                $scope.buyer = response.data;
+            })
+        })
+    }
     $scope.add_buyer = function(){
         var data = $.param({
             buyer_name: $scope.buyer_name,

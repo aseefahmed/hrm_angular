@@ -35,21 +35,32 @@ class BuyersController extends Controller {
         return view('production::buyers.edit', $data);
     }
 
-    public function destroy(Request $request, $id){
+    public function destroy(Request $request, $id, $action=null){
 
-        if($id == 'all')
+        if($action == 'all')
         {
             Buyer::truncate();
         }
-        else
+        elseif($action == 'single_delete')
         {
-            $buyer = Buyer::find($id);
-            $buyer->delete();
+            Buyer::find($id)->delete();
+        }
+        else if($action == 'selected')
+        {
+            $items = explode(',', $id);
+            Buyer::destroy($items);
         }
 
     }
 
-    public function update(Request $request){
+    public function updateField($field, $id, $value)
+    {
+        Buyer::where('id', $id)->update([
+            $field => $value
+        ]);
+    }
+
+/*    public function update(Request $request){
         $buyer_id = Buyer::max('id')+1;
         $buyer = Buyer::find($request->id);
         $buyer->buyer_name = $request->buyer_name;
@@ -62,7 +73,7 @@ class BuyersController extends Controller {
         $buyer->save();
         $data['buyer'] = Buyer::find($request->id);
         return view('production::ajax-views.buyer_details_edit', $data);
-    }
+    }*/
 
     public function addBuyer(Request $request){
         $buyer_id = Buyer::max('id')+1;
