@@ -95,15 +95,66 @@
                             <h3 class="modal-title">Add Buyer</h3>
                         </div>
                         <div class="modal-body">
-                            <form id="add-buyer-form" method="post" enctype="multipart/form-data">
+                            <form method="post" enctype="multipart/form-data" name="myForm" novalidate>
                                 <div class="formSep">
                                     <div class="row">
                                         <div class="col-sm-12">
-                                            <code>Buyer Name</code> <span style="color:red">*</span>
+                                            <code>Buyer</code><span style="color:red">*</span>
                                             <div class="row">
                                                 &nbsp;&nbsp;
                                             </div>
-                                            <input class="form-control" placeholder="Buyer Name" type="text" ng-model="buyer_name"/>
+                                            <input class="form-control" placeholder="Buyer" name="buyer_name" type="text" ng-model="buyer_name" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formSep">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <code>Postal Address</code>
+                                            <div class="row">
+                                                &nbsp;&nbsp;
+                                            </div>
+                                            <input class="form-control" placeholder="Postal Address" type="text" ng-model="postal_address"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formSep">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <code>Contact Person</code>
+                                            <div class="row">
+                                                &nbsp;&nbsp;
+                                            </div>
+                                            <input class="form-control" placeholder="Contact Person" type="text" ng-model="contact_person"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formSep">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <code>Email Address</code>
+                                            <div class="row">
+                                                &nbsp;&nbsp;
+                                            </div>
+                                            <input class="form-control" placeholder="Email Address" type="text" ng-model="email_address"/>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <code>Contact Number</code>
+                                            <div class="row">
+                                                &nbsp;&nbsp;
+                                            </div>
+                                            <input class="form-control" placeholder="Contact Number" type="text" ng-model="contact_number"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formSep">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <code>Website</code>
+                                            <div class="row">
+                                                &nbsp;&nbsp;
+                                            </div>
+                                            <input class="form-control" placeholder="Website" type="text" ng-model="website"/>
                                         </div>
                                     </div>
                                 </div>

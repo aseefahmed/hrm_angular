@@ -2575,7 +2575,6 @@ th {
 }
 
 .table>thead>tr>th {
-    vertical-align: bottom;
     border-bottom: 2px solid #ddd
 }
 

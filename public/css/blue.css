@@ -112,3 +112,11 @@
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
     display: none !important;
 }
+
+.error-message {
+    color: red;
+}
+
+input.ng-dirty.ng-invalid{
+    border-color:red;
+}

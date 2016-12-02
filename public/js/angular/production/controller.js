@@ -112,11 +112,23 @@ angular.module('myApp').controller('BuyerController', function($scope, $http) {
             $http.get('/production/buyer/fetchBuyerDetails/'+id).then(function(response){
                 $scope.buyer = response.data;
             })
+        }, function(response){
+            $('.top-right').notify({
+                type: 'danger',
+                message: { html: '<span class="glyphicon glyphicon-info-sign"></span> <strong>The operation was unsuccessful.</strong>' },
+                closable: false,
+                fadeOut: { enabled: true, delay: 2000 }
+            }).show();
         })
     }
     $scope.add_buyer = function(){
         var data = $.param({
             buyer_name: $scope.buyer_name,
+            postal_address: $scope.postal_address,
+            contact_person: $scope.contact_person,
+            email_address: $scope.email_address,
+            contact_number: $scope.contact_number,
+            website: $scope.website,
             buyer_image: $scope.buyer_image
         });
         var config = {
@@ -149,6 +161,5 @@ angular.module('myApp').controller('BuyerController', function($scope, $http) {
             $scope.buyer_name = null;
         });
     };
-
 })
 

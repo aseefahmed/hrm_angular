@@ -79,6 +79,11 @@ class BuyersController extends Controller {
         $buyer_id = Buyer::max('id')+1;
         $buyer = new Buyer();
         $buyer->buyer_name = $request->buyer_name;
+        $buyer->postal_address = $request->postal_address;
+        $buyer->contact_person = $request->contact_person;
+        $buyer->contact_number = $request->contact_number;
+        $buyer->email_address = $request->email_address;
+        $buyer->website = $request->website;
         $buyer->user_id = Auth::user()->id;
         if($request->buyer_image != ""){
             $file_extension = $request->file('buyer_image')->guessExtension();

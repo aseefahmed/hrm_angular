@@ -28,23 +28,42 @@
                                 <div class="col-sm-12">
                                     <table class="table table-responsive table-bordered table-striped">
                                         <thead>
-                                        <tr valign="middle">
+                                        <tr valign="top">
                                             <th width='25%'>Buyer Name: </th>
-                                            <td><span class="col-sm-10"><?php wordwrap("## buyer[0].buyer_name ##" , 16, '<br>') ?></span><a ng-click="edit_buyer({{ $buyer_id  }}, 'Buyer Name', 'buyer_name')" class="th-pointer col-sm-2 glyphicon glyphicon-pencil text-right"></a></td>
-                                            <td rowspan="3" width="25%"><img src="{{ asset('img/uploads/production/buyers') }}/## buyer[0].image ##" width="100%" height="100%"></td>
+                                            <td><span class="col-sm-10">## buyer[0].buyer_name ##</span><a ng-click="edit_buyer({{ $buyer_id  }}, 'Buyer', 'buyer_name')" class="th-pointer col-sm-2 glyphicon glyphicon-pencil text-right"></a></td>
+                                            <td rowspan="2" width="25%"><img src="{{ asset('img/uploads/production/buyers') }}/## buyer[0].image ##" width="100%" height="100%"></td>
+                                        </tr>
+                                        <tr>
+                                            <th width='25%'>Postal Address: </th>
+                                            <td><span class="col-sm-10">## buyer[0].postal_address| uppercase ## </span><a ng-click="edit_buyer({{ $buyer_id  }}, 'Postal Address', 'postal_address')" class="th-pointer col-sm-2 glyphicon glyphicon-pencil text-right"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <th width='25%'>Contact Person: </th>
+                                            <td colspan="2"><span class="col-sm-10">## buyer[0].contact_person | uppercase ## </span><a ng-click="edit_buyer({{ $buyer_id  }}, 'Contact Person', 'contact_person')" class="th-pointer col-sm-2 glyphicon glyphicon-pencil text-right"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <th width='25%'>Email Address: </th>
+                                            <td colspan="2"><span class="col-sm-10"><a href="mailto:## buyer[0].email_address ##">## buyer[0].email_address| uppercase ## </a></span><a ng-click="edit_buyer({{ $buyer_id  }}, 'Email Address', 'email_address')" class="th-pointer col-sm-2 glyphicon glyphicon-pencil text-right"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <th width='25%'>Contact Number: </th>
+                                            <td colspan="2"><span class="col-sm-10">## buyer[0].contact_number | uppercase ## </span><a ng-click="edit_buyer({{ $buyer_id  }}, 'Contact Number', 'contact_number')" class="th-pointer col-sm-2 glyphicon glyphicon-pencil text-right"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <th width='25%'>Website: </th>
+                                            <td colspan="2"><span class="col-sm-10"><a href="//## buyer[0].website ##" target="_blank">## buyer[0].website| uppercase ## </a></span><a ng-click="edit_buyer({{ $buyer_id  }}, 'Website', 'website')" class="th-pointer col-sm-2 glyphicon glyphicon-pencil text-right"></a></td>
                                         </tr>
                                         <tr>
                                             <th width='25%'>Created By: </th>
-                                            <td><span class="col-sm-10">## buyer[0].user.first_name | uppercase ## ## buyer[0].user.last_name | uppercase ## </span></td>
+                                            <td colspan="2"><span class="col-sm-10">## buyer[0].user.first_name | uppercase ## ## buyer[0].user.last_name | uppercase ## </span></td>
                                         </tr>
                                         <tr>
                                             <th width='25%'>Created At: </th>
-                                            <td><span class="col-sm-10">## buyer[0].created_at | filterDate ## </span></td>
-                                            <td></td>
+                                            <td colspan="2"><span class="col-sm-10">## buyer[0].created_at | filterDate ## </span></td>
                                         </tr>
                                         <tr>
                                             <th width='25%'>Updated At: </th>
-                                            <td><span class="col-sm-10">## buyer[0].updated_at | filterDate ## </span></td>
+                                            <td colspan="2"><span class="col-sm-10">## buyer[0].updated_at | filterDate ## </span></td>
                                         </tr>
                                         </thead>
                                     </table>
@@ -109,7 +128,7 @@
                                             <div class="row">
                                                 &nbsp;&nbsp;
                                             </div>
-                                            <input class="form-control" placeholder="Buyer Name" type="text" ng-model="type"/>
+                                            <input class="form-control" placeholder="## editable_item ##" type="text" ng-model="type"/>
                                         </div>
                                     </div>
                                 </div>
