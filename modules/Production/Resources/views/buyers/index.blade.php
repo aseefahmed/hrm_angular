@@ -167,7 +167,7 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <code>Image</code>
-                                            <input ng-model="buyer_image" type="file" class="file file-upload" data-preview-file-type="text" />
+                                            <input ng-model="file" type="file" class="file file-upload" data-preview-file-type="text" />
                                         </div>
                                     </div>
                                 </div>

@@ -14,6 +14,8 @@
 <script src="{{ asset('js/angular/angular.min.js') }}"></script>
 <!-- angular js main app js -->
 <script src="{{ asset('js/angular/production/main.js') }}"></script>
+<!-- angular js services -->
+<script src="{{ asset('js/angular/production/service.js') }}"></script>
 <!-- angular js controllers -->
 <script src="{{ asset('js/angular/production/controller.js') }}"></script>
 <!-- angular js filters -->

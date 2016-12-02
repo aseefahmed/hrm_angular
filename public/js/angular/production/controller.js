@@ -1,4 +1,4 @@
-angular.module('myApp').controller('BuyerController', function($scope, $http) {
+angular.module('myApp').controller('BuyerController', function($scope, $http, fileUpload) {
     $scope.num_of_items_arr = [{id: 5, value: 5},{id: 10, value: 10},{id: 20, value: 20},{id: 50, value: 50},{id: 100, value: 100}];
     $http.get('/production/fetchBuyersList').then(function (response) {
         $scope.num_of_items = 10;
