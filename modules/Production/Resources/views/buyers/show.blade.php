@@ -28,26 +28,26 @@
                                 <div class="col-sm-12">
                                     <table class="table table-responsive table-bordered table-striped">
                                         <thead>
-                                        <tr valign="top">
+                                        <tr>
                                             <th width='25%'>Buyer Name: </th>
-                                            <td><span class="col-sm-10">## buyer[0].buyer_name ##</span><a ng-click="edit_buyer({{ $buyer_id  }}, 'Buyer', 'buyer_name')" class="th-pointer col-sm-2 glyphicon glyphicon-pencil text-right"></a></td>
+                                            <td><span class="col-sm-10">## buyer[0].buyer_name ##</span><a ng-click="edit_buyer({{ $buyer_id  }}, 'Buyer', 'buyer_name', 'text', true, '', 50, '', 'This is a mendatory field (Maximum: 50 Characters).')" class="th-pointer col-sm-2 glyphicon glyphicon-pencil text-right"></a></td>
                                             <td rowspan="2" width="25%"><img src="{{ asset('img/uploads/production/buyers') }}/## buyer[0].image ##" width="100%" height="100%"></td>
                                         </tr>
                                         <tr>
                                             <th width='25%'>Postal Address: </th>
-                                            <td><span class="col-sm-10">## buyer[0].postal_address| uppercase ## </span><a ng-click="edit_buyer({{ $buyer_id  }}, 'Postal Address', 'postal_address')" class="th-pointer col-sm-2 glyphicon glyphicon-pencil text-right"></a></td>
+                                            <td><span class="col-sm-10 wordwrap">## buyer[0].postal_address| uppercase ## </span><a ng-click="edit_buyer({{ $buyer_id  }}, 'Postal Address', 'postal_address', 'text', false, '', 70, '', 'This field not be more than 70 characters long.')" class="th-pointer col-sm-2 glyphicon glyphicon-pencil text-right"></a></td>
                                         </tr>
                                         <tr>
                                             <th width='25%'>Contact Person: </th>
-                                            <td colspan="2"><span class="col-sm-10">## buyer[0].contact_person | uppercase ## </span><a ng-click="edit_buyer({{ $buyer_id  }}, 'Contact Person', 'contact_person')" class="th-pointer col-sm-2 glyphicon glyphicon-pencil text-right"></a></td>
+                                            <td colspan="2"><span class="col-sm-10">## buyer[0].contact_person | uppercase ## </span><a ng-click="edit_buyer({{ $buyer_id  }}, 'Contact Person', 'contact_person', 'text', false, '', 70, '', 'This field not be more than 55 characters long.')" class="th-pointer col-sm-2 glyphicon glyphicon-pencil text-right"></a></td>
                                         </tr>
                                         <tr>
                                             <th width='25%'>Email Address: </th>
-                                            <td colspan="2"><span class="col-sm-10"><a href="mailto:## buyer[0].email_address ##">## buyer[0].email_address| uppercase ## </a></span><a ng-click="edit_buyer({{ $buyer_id  }}, 'Email Address', 'email_address')" class="th-pointer col-sm-2 glyphicon glyphicon-pencil text-right"></a></td>
+                                            <td colspan="2"><span class="col-sm-10"><a href="mailto:## buyer[0].email_address ##">## buyer[0].email_address| uppercase ## </a></span><a ng-click="edit_buyer({{ $buyer_id  }}, 'Email Address', 'email_address', 'text', false, '', '', '', 'Email address must be valid.')" class="th-pointer col-sm-2 glyphicon glyphicon-pencil text-right"></a></td>
                                         </tr>
                                         <tr>
                                             <th width='25%'>Contact Number: </th>
-                                            <td colspan="2"><span class="col-sm-10">## buyer[0].contact_number | uppercase ## </span><a ng-click="edit_buyer({{ $buyer_id  }}, 'Contact Number', 'contact_number')" class="th-pointer col-sm-2 glyphicon glyphicon-pencil text-right"></a></td>
+                                            <td colspan="2"><span class="col-sm-10">## buyer[0].contact_number | uppercase ## </span><a ng-click="edit_buyer({{ $buyer_id  }}, 'Contact Number', 'contact_number', 'text', false, '', 20, '', 'This field not be more than 20 characters long.')" class="th-pointer col-sm-2 glyphicon glyphicon-pencil text-right"></a></td>
                                         </tr>
                                         <tr>
                                             <th width='25%'>Website: </th>
@@ -120,7 +120,7 @@
                             <h3 class="modal-title">Edit Buyer</h3>
                         </div>
                         <div class="modal-body">
-                            <form id="add-buyer-form" method="post" enctype="multipart/form-data">
+                            <form name="myForm" method="post" enctype="multipart/form-data" novalidate>
                                 <div class="formSep">
                                     <div class="row">
                                         <div class="col-sm-12">
@@ -128,13 +128,14 @@
                                             <div class="row">
                                                 &nbsp;&nbsp;
                                             </div>
-                                            <input class="form-control" placeholder="## editable_item ##" type="text" ng-model="type"/>
+                                            <input class="form-control" placeholder="## editable_item ##" name="this_field" type="## field_type ##" ng-required="## is_required ##" ng-minlength="## min_length ##" ng-maxlength="## max_length ##" ng-pattern="## pattern ##" ng-model="type"/>
+                                            <span class="help-block " ng-show="myForm.this_field.$dirty && myForm.this_field.$invalid">## error_text ##</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
                                     <a class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove-sign"></span> Cancel</a>
-                                    <button type="submit" name="commit" class="btn btn-success" ng-click="edit_buyer_confirmed({{ $buyer_id }})"><span class="glyphicon glyphicon-ok-sign"></span> Edit  </button>
+                                    <button type="submit" name="commit" class="btn btn-success" ng-disabled="myForm.$invalid" ng-click="edit_buyer_confirmed({{ $buyer_id }})"><span class="glyphicon glyphicon-ok-sign"></span> Edit  </button>
                                 </div>
                             </form>
                         </div>

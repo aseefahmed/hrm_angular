@@ -103,7 +103,8 @@
                                             <div class="row">
                                                 &nbsp;&nbsp;
                                             </div>
-                                            <input class="form-control" placeholder="Buyer" name="buyer_name" type="text" ng-model="buyer_name" />
+                                            <input class="form-control" placeholder="Buyer" name="buyer_name" type="text" ng-model="buyer_name" ng-required="true" ng-maxlength="50">
+                                            <span class="help-block " ng-show="myForm.buyer_name.$dirty && myForm.buyer_name.$invalid">This is a mendatory field (Maximum: 50 Characters).</span>
                                         </div>
                                     </div>
                                 </div>
@@ -114,7 +115,8 @@
                                             <div class="row">
                                                 &nbsp;&nbsp;
                                             </div>
-                                            <input class="form-control" placeholder="Postal Address" type="text" ng-model="postal_address"/>
+                                            <input class="form-control" placeholder="Postal Address" name="postal_address" type="text" ng-model="postal_address" ng-maxlength="70"/>
+                                            <span class="help-block " ng-show="myForm.postal_address.$dirty && myForm.postal_address.$invalid">This field not be more than 70 characters long.</span>
                                         </div>
                                     </div>
                                 </div>
@@ -125,7 +127,8 @@
                                             <div class="row">
                                                 &nbsp;&nbsp;
                                             </div>
-                                            <input class="form-control" placeholder="Contact Person" type="text" ng-model="contact_person"/>
+                                            <input class="form-control" placeholder="Contact Person" type="text" name="contact_person" ng-model="contact_person" ng-maxlength="55"/>
+                                            <span class="help-block " ng-show="myForm.contact_person.$dirty && myForm.contact_person.$invalid">It must not be more than 55 characters long.</span>
                                         </div>
                                     </div>
                                 </div>
@@ -136,14 +139,16 @@
                                             <div class="row">
                                                 &nbsp;&nbsp;
                                             </div>
-                                            <input class="form-control" placeholder="Email Address" type="text" ng-model="email_address"/>
+                                            <input class="form-control" placeholder="Email Address" name="email" type="text" ng-model="email_address" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/"/>
+                                            <span class="help-block " ng-show="myForm.email.$dirty && myForm.email.$invalid">Email address must be valid.</span>
                                         </div>
                                         <div class="col-sm-6">
                                             <code>Contact Number</code>
                                             <div class="row">
                                                 &nbsp;&nbsp;
                                             </div>
-                                            <input class="form-control" placeholder="Contact Number" type="text" ng-model="contact_number"/>
+                                            <input class="form-control" placeholder="Contact Number" type="text" name="contact_number" ng-model="contact_number" ng-maxlength="20"/>
+                                            <span class="help-block " ng-show="myForm.contact_number.$dirty && myForm.contact_number.$invalid">It must not be more than 20 characters long.</span>
                                         </div>
                                     </div>
                                 </div>
@@ -168,7 +173,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <a class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove-sign"></span> Cancel</a>
-                                    <button type="submit" name="commit" class="btn btn-success" ng-click="add_buyer()"><span class="glyphicon glyphicon-ok-sign"></span> Add Buyer </button>
+                                    <button type="submit" ng-disabled="myForm.$invalid" name="commit" class="btn btn-success" ng-click="add_buyer()"><span class="glyphicon glyphicon-ok-sign"></span> Add Buyer </button>
                                 </div>
                             </form>
                         </div>

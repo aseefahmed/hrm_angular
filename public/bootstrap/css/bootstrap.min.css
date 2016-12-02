@@ -2619,7 +2619,7 @@ th {
 
 .table-bordered>thead>tr>th,
 .table-bordered>thead>tr>td {
-    border-bottom-width: 2px
+    border-bottom-width: 4px
 }
 
 .table-striped>tbody>tr:nth-child(odd) {

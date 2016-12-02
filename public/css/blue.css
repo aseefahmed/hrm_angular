@@ -120,3 +120,14 @@
 input.ng-dirty.ng-invalid{
     border-color:red;
 }
+
+.help-block {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: red;
+}
+
+.wordwrap {
+    word-wrap: break-word;
+}

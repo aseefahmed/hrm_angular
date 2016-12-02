@@ -92,15 +92,25 @@ angular.module('myApp').controller('BuyerController', function($scope, $http) {
             $scope.buyer = response.data;
         })
     };
-    $scope.edit_buyer = function (id, edit_item, field) {
+    $scope.edit_buyer = function (id, edit_item, field, field_type, is_required, min_length, max_length, pattern, error_text) {
         $scope.editable_item = edit_item;
         $scope.buyer_id = id;
         $scope.field = field;
+        $scope.field_type = field_type;
+        $scope.is_required = is_required;
+        $scope.min_length = min_length;
+        $scope.max_length = max_length;
+        $scope.pattern = pattern;
+        $scope.error_text = error_text;
         $scope.type = null;
         $('#edit-buyer-modal').modal('toggle');
     }
     $scope.edit_buyer_confirmed = function (id) {
         $('#edit-buyer-modal').modal('toggle');
+        if($scope.type == null)
+        {
+            $scope.type = '--';
+        }
         $http.get('/production/buyer/update/'+$scope.field+'/'+id+'/'+$scope.type).then(function(response){
             $('.top-right').notify({
                 type: 'success',
